@@ -1,6 +1,6 @@
 ﻿using System;
-using MVC_Console.Controller;
-using MVC_Console.Model;
+using MVC_Console.Controllers;
+using MVC_Console.Models;
 
 namespace MVC_Console
 {
@@ -9,6 +9,9 @@ namespace MVC_Console
         static void Main(string[] args)
         {
             ProdutoController produtoController = new ProdutoController();
+
+            produtoController.Cadastrar();
+
             produtoController.MostrarProdutos();
         }
     }

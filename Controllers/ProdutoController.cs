@@ -1,14 +1,23 @@
 using System.Collections.Generic;
-using MVC_Console.Model;
-using MVC_Console.View;
+using MVC_Console.Models;
+using MVC_Console.Views;
 
-namespace MVC_Console.Controller
+namespace MVC_Console.Controllers
 {
     public class ProdutoController
     {
+
         Produto produto = new Produto();
 
+
         ProdutoView produtoView = new ProdutoView();
+
+
+        public void Cadastrar(){
+
+            produto.Inserir(produtoView.CadastrarProduto());
+        }
+
         
         public void MostrarProdutos(){
             List<Produto> todos = produto.Ler();
